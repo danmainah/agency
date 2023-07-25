@@ -57,7 +57,7 @@ const navbarInit = () => {
         : navbar.classList.remove(shadowName);
     });
 
-    Toggle bg class on window resize
+    // Toggle bg class on window resize
     utils.resize(() => {
       const breakPoint = utils.getBreakpoint(navbar);
       if (window.innerWidth > breakPoint) {

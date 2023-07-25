@@ -1,10 +1,10 @@
 mixin Navbar
-  nav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3(data-navbar-on-scroll)
+  nav.navbar.navbar-expand-lg.navbar-light.py-3(data-navbar-on-scroll)
     .container
       a.navbar-brand(href='index.html')
         span.text-primary.fs-3.ms-1.fw-bolder Waimbu 
         span.fw-thin.text-300.fs-2 Agency
-      button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
 
       #navbarSupportedContent.collapse.navbar-collapse.pt-4.pt-lg-0

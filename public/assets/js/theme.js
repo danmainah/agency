@@ -410,20 +410,21 @@ var navbarInit = function navbarInit() {
       if (window.innerWidth <= breakPoint) {
         navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
       }
-    }); // navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, () => {
-    //   navbar.classList.add(bgClassName);
-    //   navbar.classList.add(shadowName);
-    //   navbar.style.backgroundImage = backgroundImage;
-    //   navbar.style.transition = transition;
-    // });
-    // navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, () => {
-    //   navbar.classList.remove(bgClassName);
-    //   navbar.classList.remove(shadowName);
-    //   !html.scrollTop && (navbar.style.backgroundImage = "none");
-    // });
-    // navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, () => {
-    //   navbar.style.transition = "none";
-    // });
+    });
+    navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, function () {
+      navbar.classList.add(bgClassName);
+      navbar.classList.add(shadowName);
+      navbar.style.backgroundImage = backgroundImage;
+      navbar.style.transition = transition;
+    });
+    navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, function () {
+      navbar.classList.remove(bgClassName);
+      navbar.classList.remove(shadowName);
+      !html.scrollTop && (navbar.style.backgroundImage = 'none');
+    });
+    navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, function () {
+      navbar.style.transition = 'none';
+    });
   }
 };
 /* -------------------------------------------------------------------------- */
